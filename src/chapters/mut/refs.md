@@ -671,7 +671,7 @@ Inserting a new first element just requires creating a new node, linking from
 it to the original list, and mutating the list:
 
 ```{code-cell} ocaml
-(** [insert_first lst n] mutates mlist [lst] by inserting value [v] as the
+(** [insert_first lst v] mutates mlist [lst] by inserting value [v] as the
     first value in the list. *)
 let insert_first (lst : 'a mlist) (v : 'a) : unit =
   lst := Some { next = ref !lst; value = v }
